@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>http://localhost:53794/book/Ad Rotator/education.jpg</ImageUrl>
+    <NavigateUrl>http://localhost:53658/Book1.aspx</NavigateUrl>
+    <AlternateText>www.gmail.com</AlternateText>
+    <KeyWord>A</KeyWord>
+    <Impression>Technology</Impression>
+    <Caption>This is the caption for Ad#1</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>http://localhost:53794/book/Ad Rotator/philosophy_books.jpg</ImageUrl>
+    <NavigateUrl>http://localhost:53658/Book3.aspx</NavigateUrl>
+    <AlternateText>www.google.com</AlternateText>
+    <KeyWord>A</KeyWord>
+    <Impression>Web Site</Impression>
+    <Caption>This is the caption for Ad#2</Caption>
+  </Ad>
+  <Ad>
+    <ImageUrl>http://localhost:53794/book/Ad Rotator/Novel.jpg</ImageUrl>
+    <NavigateUrl>http://localhost:53658/Book2.aspx</NavigateUrl>
+    <AlternateText>www.flipkart.com</AlternateText>
+    <KeyWord>A</KeyWord>
+    <Impression>Technology</Impression>
+    <Caption>This is the caption for Ad#3</Caption>
+  </Ad>
+
+</Advertisements>

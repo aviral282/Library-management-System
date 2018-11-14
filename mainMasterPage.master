@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mainMasterPage.master.cs" Inherits="mainMasterPage" %>
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        lblUser.Text = (String) Session["fullname"];
+    }
+</script>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled page</title>
+    
+
+</head>
+<body style="background-position:right ; background-image: url('Images/i22.png')" >
+    
+
+
+      <form id="form1" runat="server">
+    <table width="100%" height="600px">
+       
+            <tr>
+              
+                <td width="25%" valign="top" bgcolor="#99ccff" style="font-family: &quot;Comic Sans MS&quot;; background-color: #552723;">
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" BackColor="#552723" ForeColor="#EFEFEF" LineImagesFolder="~/TreeLineImages">
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                </td>
+                <td valign="top" style="font-family: &quot;Comic Sans MS&quot;">
+                    <asp:Label ID="lblUser" runat="server" Font-Bold="True" ForeColor="White" BackColor="#552723"></asp:Label><br />
+                    <br />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <br />
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" BackColor="#C5C1C0" Font-Bold="True" ForeColor="#0A1612" Font-Italic="True">
+                        <CurrentNodeStyle ForeColor="#F7C331" />
+                        <RootNodeStyle ForeColor="Black" />
+                    </asp:SiteMapPath>
+                    <br />
+                    <asp:Label ID="Label1" runat="server" Text="Label" BackColor="White"></asp:Label>
+                </td>
+                
+            </tr>
+     </table>
+    </form>
+</body>
+</html>

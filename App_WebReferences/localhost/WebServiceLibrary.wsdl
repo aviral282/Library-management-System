@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetIssueCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIssueCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetIssueCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTitlesCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="author" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTitlesCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTitlesCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllMembers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllMembersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllMembersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTitles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTitlesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTitlesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetIssueCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIssueCount" />
+  </wsdl:message>
+  <wsdl:message name="GetIssueCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIssueCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTitlesCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTitlesCount" />
+  </wsdl:message>
+  <wsdl:message name="GetTitlesCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTitlesCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMembersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllMembers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMembersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTitlesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTitles" />
+  </wsdl:message>
+  <wsdl:message name="GetTitlesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTitlesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceLibrarySoap">
+    <wsdl:operation name="GetIssueCount">
+      <wsdl:input message="tns:GetIssueCountSoapIn" />
+      <wsdl:output message="tns:GetIssueCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitlesCount">
+      <wsdl:input message="tns:GetTitlesCountSoapIn" />
+      <wsdl:output message="tns:GetTitlesCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMembers">
+      <wsdl:input message="tns:GetAllMembersSoapIn" />
+      <wsdl:output message="tns:GetAllMembersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTitles">
+      <wsdl:input message="tns:GetTitlesSoapIn" />
+      <wsdl:output message="tns:GetTitlesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceLibrarySoap" type="tns:WebServiceLibrarySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIssueCount">
+      <soap:operation soapAction="http://tempuri.org/GetIssueCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitlesCount">
+      <soap:operation soapAction="http://tempuri.org/GetTitlesCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMembers">
+      <soap:operation soapAction="http://tempuri.org/GetAllMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitles">
+      <soap:operation soapAction="http://tempuri.org/GetTitles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceLibrarySoap12" type="tns:WebServiceLibrarySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIssueCount">
+      <soap12:operation soapAction="http://tempuri.org/GetIssueCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitlesCount">
+      <soap12:operation soapAction="http://tempuri.org/GetTitlesCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMembers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTitles">
+      <soap12:operation soapAction="http://tempuri.org/GetTitles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceLibrary">
+    <wsdl:port name="WebServiceLibrarySoap" binding="tns:WebServiceLibrarySoap">
+      <soap:address location="http://localhost:51061/WebServiceLibrary.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceLibrarySoap12" binding="tns:WebServiceLibrarySoap12">
+      <soap12:address location="http://localhost:51061/WebServiceLibrary.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

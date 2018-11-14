@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterBook.master.cs" Inherits="book_MasterBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Masterallusers</title>
+     <link href="index_files/style.css" rel="stylesheet" type="text/css"/>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 160px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            height: 16px;
+        }
+        .style2
+        {
+            width: 1px;
+            color: #ffffff;
+            height: 16px;
+        }
+        .auto-style2 {
+            width: 700px;
+            height: 296px;
+        }
+        .auto-style3 {
+            height: 93px;
+        }
+        .auto-style4 {
+            height: 72px;
+        }
+        .auto-style5 {
+            height: 28px;
+        }
+        .auto-style6 {
+            width: 56px;
+        }
+    </style>
+</head>
+<body bgcolor="white">
+      <div style="background-image: url('<%= "background_02.jpg" %>')">
+<table width="1003" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody style="background-color: #552723; color: #fff"><tr>
+    <td id="header" valign="top">
+       <%-- <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
+        <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>--%>
+                <asp:Label ID="lblLabel" runat="server" Font-Size="30px" ForeColor="White" Text="Label" BackColor="#552723"></asp:Label>
+           <%-- </ContentTemplate>
+        </asp:UpdatePanel>--%>
+        <table border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td width="303"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="auto-style3">
+
+          <tbody><tr>
+            <td class="auto-style4" bgcolor="#66CCFF" style="font-size: 40px; background-color: #552723; color: #F8F8F8;">Amplify Book Store</td>
+          </tr>
+          <tr>
+            <td class="tag" style="color: #FFFFFF">MOST COMPLETE STORE</td>
+          </tr>
+        </tbody></table></td>
+        <td valign="top" width="700" align="center" >
+            <img alt="Image is not fit" class="auto-style2"  src="Imagesbook/i5.jpg"" /></td>
+      
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#ffffff" height="1"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#f66d05" height="8" style="background-color: #552723"></td>
+  </tr>
+
+  <tr bgcolor="green">
+    <td id="links-bg" style="background-color: #896851"><table align="center" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+
+            <td class="style1"><a href="Book1.aspx"><font color="white">BOOKS</font></a></td>
+			<td class="sap">|</td>
+
+            <td class="sap">|</td>
+            <td class="style1"><a href="RegisterBook.aspx"><font color="white">REGISTER</font></a></td>
+            <td class="style2">|</td>
+            <td class="style1"><a href="BookLogin.aspx"><font color="white">
+                <asp:Label ID="Label2" runat="server" Text="Login"></asp:Label></font></td>
+			<td class="style2">|</td>
+            <td class="style1"><a href="Cart.aspx"><font color="White">
+                <asp:Label ID="Label1" runat="server" Text="Go To Cart"></asp:Label></font></a></td>
+       </tr>
+    </tbody></table>&nbsp; </td>
+  </tr>
+  <tr>
+    <td valign="top">
+   <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <p>
+                <br />
+            </p>
+            <p>
+                &nbsp;</p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form></td>
+      </tr>
+       <tr>
+
+     <td bgcolor="#f66d05" height="8" style="background-color: #917040"></td>
+  </tr>
+  <tr>
+    <td bgcolor="#343434" height="40">
+	<table align="center" border="0" cellpadding="10" cellspacing="0">
+      <tbody><tr>
+        <td class="bottomlinks"><a href="HomePage.aspx"><font color="white">Home</a></td>
+        <td class="sap2">|</td>
+
+        <td class="auto-style6"><a href="AboutUs.aspx"><font color="white">Aboutus</a></td>
+        <td class="sap2">|</td>
+		        <td class="bottomlinks"><a href="Book1.aspx"><font color="white">Products</a></td>
+                <td class="sap2">|</td>
+		        <td class="bottomlinks"><a href="Contact.aspx"><font color="white">Contact</a></td>
+      </tr>
+    </tbody></table>
+	</td>
+  </tr>
+  <tr>
+   <td align="center" bgcolor="#e0e0e0" class="auto-style5"></td>
+
+  </tr>
+</tbody></table>
+
+</body>
+</html>
+
